@@ -42,7 +42,7 @@ public class FruitAdapter extends RecyclerView .Adapter<FruitAdapter.ViewHolder>
                 Intent intent = new Intent(context,FruitActivity.class);//点击图片或者文字时，跳转页面
                 intent.putExtra(FruitActivity.FRUIT_NAME,fruit.getName());//把水果名字传递到FruitActi中
                 intent.putExtra(FruitActivity.IMAGE_ID,fruit.getImageId());
-                context.startActivity(intent);
+                context.startActivity(intent);//有些是不用context的
             }
         });
         return viewHolder;
